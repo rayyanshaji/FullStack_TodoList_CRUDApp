@@ -1,0 +1,9 @@
+.bg-primary {
+  background-color: #3093fd !important;
+}
+.navbar-light .navbar-brand {
+  color: rgba(255, 255, 255, 0.9);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}

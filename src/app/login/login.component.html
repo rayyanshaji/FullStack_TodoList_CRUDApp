@@ -1,0 +1,9 @@
+<div class="container">
+Username: <input type="text" name="username" [(ngModel)]="username">
+Password: <input type="password" name="password" [(ngModel)]="password">
+<button class="btn btn-success" (click)=handleLogin()>Login</button>
+  </div>
+
+<div class="alert alert-warning" *ngIf='login'>{{message}}</div>
+<div *ngIf='logingood'>{{success}}</div>
+
