@@ -5,11 +5,6 @@ export class HelloWorldBean {
   constructor(public message: string) { }
 }
 
-
-export class ByeBean {
-  constructor(public message: string) { }
-}
-
 @Injectable({
   providedIn: 'root'
 })
@@ -24,38 +19,12 @@ export class WelcomeDataService {
   }
 
   executeHelloWorldBeanServiceWithParameter(name) {
-    let basicAuthHeaderString = this.createBasicAuthenticationHttpHeader();
 
-    let headers = new HttpHeaders({
-      Authorization: basicAuthHeaderString
-    })
-
-    console.log(headers)
-
+ 
     return this.http.get<HelloWorldBean>(
-      `http://localhost:8080/hello-world/path/${name}`, { headers });
+      `http://localhost:8080/hello-world/path/${name}`);
   }
-
-
-
-  executeByeWorldBeanService() {
-    let basicAuthHeaderString = this.createBasicAuthenticationHttpHeader();
-
-    let headers = new HttpHeaders({
-      Authorization: basicAuthHeaderString
-    })
-   
-    return this.http.get<ByeBean>('http://localhost:8080/hello', {headers});
-  }
-
-  createBasicAuthenticationHttpHeader() {
-    let username = 'rayyanshaji'
-    let password = 'kidman'
-    let basicAuthHeaderString = 'Basic ' + window.btoa(username + ':' + password);
-    console.log(basicAuthHeaderString)
-    
-    return basicAuthHeaderString;
-  }
+ 
 }
 
 //Access to XMLHttpRequest at 'http://localhost:8080/hello' from origin 'http://localhost:4200' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.
