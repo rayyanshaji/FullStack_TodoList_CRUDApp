@@ -11,8 +11,7 @@ export class Todos {
 }
 @Component({
   selector: 'app-list-todos',
-  templateUrl: './list-todos.component.html',
-  styleUrls: ['./list-todos.component.css']
+  templateUrl: './list-todos.component.html'
 })
 
 
