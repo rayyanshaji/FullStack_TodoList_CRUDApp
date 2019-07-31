@@ -30,12 +30,6 @@ export class WelcomeComponent implements OnInit {
     console.log(response);
     this.welcomemsg = response.message;
   }
-
-  getByeMessage() {
-   console.log(this.service.executeByeWorldBeanService());
-    this.service.executeByeWorldBeanService().subscribe(resp => this.handleSuccessfulResp(resp), error => this.handleResponseError(error));
-  }
-
  
 
   handleSuccessfulResp(resp) {
