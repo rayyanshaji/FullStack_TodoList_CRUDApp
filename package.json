@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "postinstall": {"ng build --aot -prod", "./node_modules/enhanced-resolve"},
+    "heroku-postbuild": "ng build --prod"
+    "postinstall": "./node_modules/enhanced-resolve",
     "e2e": "ng e2e"
   },
   "private": true,
