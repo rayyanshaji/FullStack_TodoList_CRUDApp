@@ -8,7 +8,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "heroku-postbuild": "ng build --prod",
-    "postinstall": "npm install enhanced-resolve@3.3.0 --save-dev",
     "e2e": "ng e2e"
   },
   "private": true,
