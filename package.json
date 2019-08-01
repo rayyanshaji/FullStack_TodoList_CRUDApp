@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": ["ng build","enhanced-resolve@3.3.0","express"]
+    "build": ["ng build","enhanced-resolve@3.3.0","express"],
     "test": "ng test",
     "lint": "ng lint",
     "heroku-postbuild": "ng build --prod",
