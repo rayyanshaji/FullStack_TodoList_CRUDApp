@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "heroku-postbuild": "ng build --prod",
+    "postinstall": "npm install express path --save",
     "e2e": "ng e2e"
   },
   "private": true,
