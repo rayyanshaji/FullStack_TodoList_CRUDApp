@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoDataService } from '../todo-data.service';
 import { Router } from '@angular/router';
+
 export class Todos {
   constructor(
     public id: number,
@@ -11,10 +12,9 @@ export class Todos {
 }
 @Component({
   selector: 'app-list-todos',
-  templateUrl: './list-todos.component.html'
+  templateUrl: './list-todos.component.html',
+  styleUrls: ['./list-todos.component.css']
 })
-
-
 
 export class ListTodosComponent implements OnInit {
   message: string;
@@ -45,7 +45,6 @@ export class ListTodosComponent implements OnInit {
       )
   }
 
-
   deleteTodo(id) {
     this.todoservice.deleteTodo('rayyanshaji', id).subscribe(
       response => {
@@ -62,7 +61,6 @@ export class ListTodosComponent implements OnInit {
   }
 
   addTodo() {
- 
     this.router.navigate(['todos', -1]);
   }
 

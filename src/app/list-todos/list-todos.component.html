@@ -17,10 +17,10 @@
       <td>{{todo.id}}</td>
       <td>{{todo.description}}</td>
       <td>{{todo.date|date}}</td>
-      <td>{{todo.done}}</td>
+      <td>{{todo.done}}       
+      </td>
       <td><button (click)="updateTodo(todo.id)" class="btn btn-warning">Update</button></td>
-      <td><button (click)="deleteTodo(todo.id)" class="btn btn-danger">Delete</button></td>
-    
+      <td><button (click)="deleteTodo(todo.id)" class="btn btn-danger">Delete</button></td>   
     </tr>
     
   </tbody>

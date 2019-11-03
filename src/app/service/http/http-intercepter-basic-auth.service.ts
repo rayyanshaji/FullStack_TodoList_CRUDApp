@@ -6,7 +6,6 @@ import { HttpInterceptor, HttpRequest, HttpHandler } from '@angular/common/http'
 })
 export class HttpIntercepterBasicAuthService implements HttpInterceptor {
 
-  constructor() { }
 
   intercept(request: HttpRequest<any>, next: HttpHandler) {
     let username = 'rayyanshaji'
@@ -19,4 +18,6 @@ export class HttpIntercepterBasicAuthService implements HttpInterceptor {
     })
     return next.handle(request);
   }
+
+  constructor() { }
 }

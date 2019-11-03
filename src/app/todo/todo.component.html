@@ -9,7 +9,7 @@
 
       <label>Description</label>
 
-      <input type="text" #description="ngModel" [(ngModel)]="todo.description" class="form-control" name="description" required="required"/>
+      <input type="text" #description="ngModel" [(ngModel)]="todo.description" class="form-control" name="description" required="required" />
 
     </fieldset>
 
@@ -17,10 +17,19 @@
 
       <label>Date</label>
 
-      <input type="date" #date="ngModel" [ngModel]="todo.target | date:'yyyy-MM-dd' "
-             (ngModelChange)="todo.target = $event" class="form-control" name="target" required="required" />
+      <input type="date" #date="ngModel" [ngModel]="todo.date | date:'yyyy-MM-dd' "
+             (ngModelChange)="todo.date = $event" class="form-control" name="target" required="required" />
 
     </fieldset>
+
+    <fieldset class="form-group">
+
+      <label>Done</label>
+
+      <input type="radio" #done="ngModel" [(ngModel)]="todo.done" class="form-control" name="done"/>
+
+    </fieldset>
+
     <button type="submit" class="btn btn-success">Save</button>
   </form>
 </div>
