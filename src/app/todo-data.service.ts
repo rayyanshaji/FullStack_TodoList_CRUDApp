@@ -11,7 +11,7 @@ export class TodoDataService {
   constructor(private http: HttpClient) { }
 
   retreiveAllTodos(username) {
-    return this.http.get<Todos[]>(`http://ec2-18-222-29-176.us-east-2.compute.amazonaws.com:8085/users/${username}/todos/`);
+    return this.http.get<Todos[]>(`http://ec2-18-222-29-176.us-east-2.compute.amazonaws.com:8085/users/${username}/todos`);
   }
 
   deleteTodo(username,id) {
@@ -27,7 +27,7 @@ export class TodoDataService {
   }
 
   createTodo(username, todo) {
-    return this.http.post(`http://ec2-18-222-29-176.us-east-2.compute.amazonaws.com:8085/users/${username}/todos/`, todo);
+    return this.http.post(`http://ec2-18-222-29-176.us-east-2.compute.amazonaws.com:8085/users/${username}/todos`, todo);
   }
 
 }

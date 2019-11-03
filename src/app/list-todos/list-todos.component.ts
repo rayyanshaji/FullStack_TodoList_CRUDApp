@@ -6,8 +6,9 @@ export class Todos {
   constructor(
     public id: number,
     public description: string,
-    public target: Date,
-    public isCompleted: boolean) {
+    public done: boolean,
+    public date: Date
+   ) {
   }
 }
 @Component({
